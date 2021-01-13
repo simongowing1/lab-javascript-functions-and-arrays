@@ -71,25 +71,31 @@ const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 function averageNumbers(numbersArray) {
   if (numbersArray.length === 0) {
     return null
-  } else {
+  } 
     let average = 0;
     average = (sumNumbers(numbersArray))/numbersArray.length;
     return average
-  }
 }
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
 function averageWordLength(array){
-  let averageWord = 0;
-  for (let i = 0; i < array.length; i++) {
-    averageWord += array[i].length/array.length
-    }
-  return Math.floor(averageWord);
+  if (array.length === 0) {
+    return null
+  } else {
+    let averageWord = 0;
+    for (let i = 0; i < array.length; i++) {
+      averageWord += array[i].length/array.length
+      }
+    return Math.floor(averageWord);
+  }
 }
 
 function avg(arr){
+  if (arr.length === 0) {
+    return null
+  } 
   let averageMix = 0;
   averageMix = (sum(arr))/arr.length;
   return Math.round(averageMix * 100) / 100
